@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use PHPDockerServices\Command\MainCommand;
+
+$application = new Application();
+$application->setAutoExit(false);
+$application->add(new MainCommand());
+$application->run();

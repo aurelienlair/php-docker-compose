@@ -1,0 +1,39 @@
+{
+    "name" : "php-docker-compose",
+    "authors": [
+        {
+            "name": "Aurélien Lair",
+            "email": "aurelien.lair@nomail.com"
+        }
+    ],
+    "description": "A simple PHP Docker application with services",
+    "type": "script",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:onebip/onebip-array.git"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "symfony/console": "@stable",
+        "onebip/onebip-array": "dev-master",
+        "friendsofphp/php-cs-fixer": ">=2.11",
+        "silex/silex": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPDockerServices\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "@stable"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPDockerServices\\Tests\\": "tests/",
+            "PHPDockerServices\\Tests\\": "tests/common"
+        }
+    }
+}
